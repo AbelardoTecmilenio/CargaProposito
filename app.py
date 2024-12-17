@@ -2,7 +2,10 @@ import streamlit as st
 from azure.storage.blob import BlobServiceClient
 from datetime import datetime
 
-
+# Configuración de Azure Blob Storage desde variables de entorno
+STORAGE_ACCOUNT_NAME = os.environ["STORAGE_ACCOUNT_NAME"]
+STORAGE_ACCOUNT_KEY = os.environ["STORAGE_ACCOUNT_KEY"]
+CONTAINER_NAME = os.environ["CONTAINER_NAME"]
 
 # Conecta a Azure Blob Storage
 connection_string = f"DefaultEndpointsProtocol=https;AccountName={STORAGE_ACCOUNT_NAME};AccountKey={STORAGE_ACCOUNT_KEY};EndpointSuffix=core.windows.net"
